@@ -10,7 +10,7 @@ $pasiens = $dbh->query($query);
     <div class="container-fluid px-4">
         <div class="d-flex mt-4">
             <h3>Daftar Pasien</h3>
-            <a href="#" class="btn btn-primary ms-auto">+ Pasien</a>
+            <a href="pasien_create.php" class="btn btn-primary ms-auto">+ Pasien</a>
         </div>
 
         <table class="table mt-4">
@@ -36,7 +36,7 @@ $pasiens = $dbh->query($query);
                     <td><?= $pasien['gender'] ?></td>
                     <td><?= $pasien['alamat'] ?></td>
                     <td>
-                        <a href="#" class="btn btn-primary">
+                        <a href="pasien_edit.php?id=<?= $pasien['id'] ?>" class="btn btn-primary">
                             <i class="fas fa-edit"></i>
                          </a>
                         <a href="#" class="btn btn-danger">
